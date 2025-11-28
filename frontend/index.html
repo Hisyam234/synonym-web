@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinonim Kata - Pembantu Penulisan Formal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔄 Sinonim Kata Indonesia</h1>
+            <p class="subtitle">Tingkatkan kualitas penulisan jurnal, artikel, skripsi & laporan Anda</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="textInput">Masukkan Paragraf:</label>
+                    <textarea 
+                        id="textInput" 
+                        placeholder="Ketik atau paste paragraf Anda di sini...  Contoh: Penelitian ini dilakukan untuk mengetahui efektivitas metode pembelajaran..."
+                        rows="6"
+                    ></textarea>
+                </div>
+
+                <button id="scanBtn" class="btn btn-primary">
+                    <span class="btn-icon">🔍</span> Pindai Kata
+                </button>
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section" id="outputSection" style="display: none;">
+                <h2>Hasil Pemindaian:</h2>
+                <div class="text-display" id="textDisplay"></div>
+                <div class="stats">
+                    <p>Kata yang dapat diganti: <span id="replaceableCount">0</span></p>
+                    <p>Total kata: <span id="totalCount">0</span></p>
+                </div>
+            </section>
+
+            <!-- Synonym Modal -->
+            <div id="synonymModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Pilih Sinonim untuk: <span id="selectedWord"></span></h3>
+                    <div id="synonymList" class="synonym-list"></div>
+                    <div class="modal-actions">
+                        <button id="replaceBtn" class="btn btn-success">Ganti</button>
+                        <button id="cancelBtn" class="btn btn-secondary">Batal</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Sinonim Kata Indonesia - Untuk Penulisan Berkualitas</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
